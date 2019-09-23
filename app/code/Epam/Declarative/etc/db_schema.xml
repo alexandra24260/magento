@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="atask22"
+           resource="default"
+           engine="innodb"
+           comment="Task2_2 Table">
+
+        <column xsi:type="int"
+                name="id"
+                padding="10"
+                unsigned="true"
+                identity="true"
+                nullable="false"
+                comment="ID" />
+
+        <column xsi:type="varchar"
+                name="name"
+                length="255"
+                comment="Name" />
+
+        <column xsi:type="timestamp"
+                name="created"
+                comment="Creation date" />
+
+        <column xsi:type="timestamp"
+                name="updated"
+                comment="update time" />
+
+        <column xsi:type="int"
+                name="is_active"
+                unsigned="true"
+                nullable="false"
+                identity="false"
+                comment="Is active" />
+
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id" />
+        </constraint>
+    </table>
+</schema>
